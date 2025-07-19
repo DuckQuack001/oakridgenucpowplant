@@ -1,22 +1,44 @@
-## To Contribute to the wiki with no prior expiriance
-Read this [Doc](./CONTRIBUTING_GUIDE.md) on how to write for the wiki, dont follow any instuctions for the other github app if you came from there.
+# How to Contribute to the Wiki
 
+Welcome! This guide will help you contribute to the wiki, even if you have no prior experience with GitHub, programming, or wikis.
 
-### Do you have the github desktop app?
+> **Important:**  
+> Please read the [CONTRIBUTING_GUIDE.md](./CONTRIBUTING_GUIDE.md) for writing standards and wiki-specific instructions.  
+> Ignore any instructions about other GitHub apps if you arrived from there.
 
-### YES:
+---
 
-  great, please clone this repo, and edit the file you want to edit! (assumeing that you dont have a text editor please go to the second NO)
+### 1. Do You Have the GitHub Desktop App?
 
-### NO:
-  ok, please download the [GitHub Desktop App](https://github.com/apps/desktop)
-    Do You have a text editor?
+#### YES
 
-### YES:
-    great, please clone this repo, and edit the file you want to edit!
-### NO:
-  Download [VS Code](https://code.visualstudio.com/download) or [Webstorm](https://www.jetbrains.com/webstorm/download/?section=windows) then clone this repo and edit the file you want to edit.
+1. **Clone the repository:**
+    - Open GitHub Desktop.
+    - Click **File > Clone Repository...**
+    - Paste this URL:  
+      ```
+      https://github.com/DuckQuack001/oakridgenucpowplant/
+      ```
+    - Choose a folder on your computer.
 
-## To clone a repo
-Click the `Clone Repository` button, chose URL and enter `https://github.com/DuckQuack001/oakridgenucpowplant/`, after it has finished downloading all of the files you can go to the [repo location](File://%USERPROFILE%/Documents/GitHub/oakridgenucpowplant) `%USERPROFILE%/Documents/GitHub/oakridgenucpowplant/` (windows) or
-`~/Docuements//GitHub/oakridgenucpowplant/` for you linux goobers.
+2. **Text Editor Check:**
+    - **Do you have a text editor?**
+        - **YES:**  
+            - Open the folder where you cloned the repo.
+            - Open any file (like this one), exept the no-no's in [the readme](./README.md#-hands-off-for-now)
+            - Make your changes and save.
+        - **NO:**  
+            - Download and install [VS Code](https://code.visualstudio.com/download) (recommended) or [WebStorm](https://www.jetbrains.com/webstorm/download/?section=windows).
+            - open your cloned folder typicly in `%USERPROFILE%/Documents/GitHub/oakridgenucpowplant/`.
+
+3. **Commit & Push Your Changes:**
+    - Go back to GitHub Desktop.
+    - Review your changes. Add a short summary (e.g., "Updated wiki instructions", "Fixed Grammer (loose that oxford comma, Nerd.)").
+    - Click **Commit to main** (or your branch).
+    - Click **Push origin** to upload your changes.
+    - Wait for a maintainer to review your pull request
+
+#### No, I do *NOT* have the GitHub Desktop app
+
+1. [Download GitHub Desktop](https://desktop.github.com/) and install it.
+2. Follow the steps under **YES** above.
