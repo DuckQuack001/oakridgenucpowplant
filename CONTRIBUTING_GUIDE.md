@@ -8,7 +8,7 @@ So, you want to contribute? Lovely! Nobody loves newbies more than me!! This gui
 
 Unless you’ve somehow got write access (unlikely), you'll need to fork the repo. Go to the GitHub page and hit that **Fork** button.
 
-> **⚠️ NOTE:** In this tutorial I do not explain on how to use [GitHub Desktop](https://desktop.github.com/download/), we are using [Git SCM](https://git-scm.com/downloads). Please download it.
+> **⚠️ NOTE:** In this tutorial I do not explain on how to use [GitHub Desktop](https://desktop.github.com/download/), if you would like to use github desktop please go to [Contributung For Dummies](./) we are using [Git SCM](https://git-scm.com/downloads). Please download it.
 
 Then clone your forked repostitory to your machine (NOT the `https://github.com/DuckQuack001/oakridgenucpowplant`):
 ```bash
