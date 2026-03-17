@@ -1,6 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"dark","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"ONPS Wiki"});
+});
+</script>
+
+<!-- Google Analitics -->
+<script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-8C0MST73WK"></script>
+  <script type="text/plain" data-cookie-consent="tracking">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8C0MST73WK');
+  </script>
+<!-- end of Google Analitics-->
+
+<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+
+
+
+
+
+<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="ONPS - Info panels" />
+    <meta name="description" content="Oakridge Nuclear Power Station - Info panels" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wiki.koyot.digital/info-panels.html" />
+    <meta property="og:title" content="ONPS - Info panels" />
+    <meta property="og:description" content="Oakridge Nuclear Power Station - Info panels" />
+    <meta property="og:image" content="/images/Info%20Panels.webp" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wiki.koyot.digital/info-panels.html" />
+    <meta property="twitter:title" content="ONPS - Info panels" />
+    <meta property="twitter:description" content="Oakridge Nuclear Power Station - Info panels" />
+    <meta property="twitter:image" content="/images/Info%20Panels.webp" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Oakridge Nuclear Power Station - Information Panels</title>
@@ -9,9 +56,26 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/Favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/Favicon/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="info-panels.css">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/info-panels.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+<header id="header" style="
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 8px;
+">
+  <div style="display: flex; gap: 12px; align-items: center;">
+    <img src="images/home.svg" 
+         style="width: 24px; height: 24px; cursor: pointer;" 
+         onclick="relocate('index.html');">
+    <img src="images/settings.svg" 
+         style="width: 24px; height: 24px; cursor: pointer;" 
+         onclick="relocate('settings.html');">
+  </div>
+
+  <h2 style="margin: 0;">Oakridge Nuclear Power Station Wiki</h2>
+</header>
 <body>
   <header class="hero small-hero">
     <div class="hero-overlay"></div>
@@ -31,8 +95,13 @@
         <br>
         <p>Information Panels are what tell you the status of various systems within the nuclear facility. They provide real-time information, warnings, and critical alerts to the operators.</p>
         <br>
+	<p>Normally, if white lights are on, there's nothing to worry about. Yellow lights aren't too serious either, but they can be a warning that something may go wrong if the issue isn't addressed soon. Red lights, on the other 	hand, usually signal an emergency. When they appear, something is seriously wrong and needs immediate attention.</p>
+        <br>
         <p>Understanding some of the lights can be confusing, but the interactive graphic below can help. Just click on a panel light, it's that simple.</p>
         <br>
+        
+        <input type="text" id="alarmSearch" placeholder="Search alarms..." autocomplete="off">
+        <br><br>
 
         <details class="details">
             <summary class="summary">Condenser Coolant Panel</summary>
@@ -101,7 +170,7 @@
                     <td><button class="warning" data-explanation-id="deaerator-temp">Deaerator A Temp Low</button></td>
                     <td><button class="critical" data-explanation-id="deaerator-pressure">Deaerator A Pressure Low</button></td>
                     <td><button class="warning" data-explanation-id="deaerator-temp">Deaerator B Temp Low</button></td>
-                    <td><button class="critical" data-explanation-id="deaerator-pressure">Deaerator A Pressure Low</button></td>
+                    <td><button class="critical" data-explanation-id="deaerator-pressure">Deaerator B Pressure Low</button></td>
                 </tr>
             </table>
         </details>
@@ -131,25 +200,25 @@
         </details>
 
         <details class="details">
-            <summary class="summary">Recirculation Panel</summary>
+            <summary class="summary">Reactor Circulation Panel</summary>
             <table class="info-table">
                 <tr>
                     <td><button class="info" data-explanation-id="rpv-temp">High RPV Temperature</button></td>
-                    <td><button class="warning" data-explanation-id="recirc-dry">Recirc Loop Dry</button></td>
-                    <td><button class="info" data-explanation-id="recirc-pump">Recirc Pump A2</button></td>
-                    <td><button class="info" data-explanation-id="recirc-pump">Recirc Pump A1</button></td>
+                    <td><button class="warning" data-explanation-id="circ-dry">MCP Loop Dry</button></td>
+                    <td><button class="info" data-explanation-id="circ-pump">MCP A2</button></td>
+                    <td><button class="info" data-explanation-id="circ-pump">MCP A1</button></td>
                 </tr>
                 <tr>
                     <td><button class="info" data-explanation-id="rpv-temp">Low RPV Temperature</button></td>
                     <td><button class="warning" data-explanation-id="core-water">Core Water Low</button></td>
-                    <td><button class="info" data-explanation-id="recirc-pump">Recirc Pump B2</button></td>
-                    <td><button class="info" data-explanation-id="recirc-pump">Recirc Pump B1</button></td>
+                    <td><button class="info" data-explanation-id="circ-pump">MCP B2</button></td>
+                    <td><button class="info" data-explanation-id="circ-pump">MCP B1</button></td>
                 </tr>
                 <tr>
-                    <td><button class="critical" data-explanation-id="recirc-trip">Recirc Pump Trip</button></td>
+                    <td><button class="critical" data-explanation-id="circ-trip">MCP Trip</button></td>
                     <td><button class="critical" data-explanation-id="core-water">Core Water Low Low</button></td>
-                    <td><button class="info" data-explanation-id="recirc-pump">Recirc Pump C2</button></td>
-                    <td><button class="info" data-explanation-id="recirc-pump">Recirc Pump C1</button></td>
+                    <td><button class="info" data-explanation-id="circ-pump">MCP C2</button></td>
+                    <td><button class="info" data-explanation-id="circ-pump">MCP C1</button></td>
                 </tr>
             </table>
         </details>
@@ -218,7 +287,7 @@
             <summary class="summary">Water/Pressure Relief System Panel</summary>
             <table class="info-table">
                 <tr>
-                    <td><button class="critical" data-explanation-id="recirc-drain">Recirc Drain Valve</button></td>
+                    <td><button class="critical" data-explanation-id="circ-drain">Circ Drain Valve</button></td>
                     <td><button class="warning" data-explanation-id="rpv-relief-valve">Relief Valve 1</button></td>
                     <td><button class="warning" data-explanation-id="rpv-relief-valve">Relief Valve 2</button></td>
                     <td><button class="warning" data-explanation-id="steam-relief-valve">Relief Valve 7</button></td>
@@ -333,6 +402,8 @@
             <p>This alert indicates that the coolant pumps for either cooling tower have tripped.</p>
             <br>
             <p>Typically, you would only see this occur during a power loss.</p>
+            <br>
+            <p>To regain power, call engineering and tell them to reset the breakers.</p>
         </div>
         <div id="coolant-dry">
             <p>This warning indicates that the cooling tower coolant loop is dry. This is normal behavior before the pumps are running.</p>
@@ -346,6 +417,8 @@
             <p>This alert indicates that the turbine has tripped.</p>
             <br>
             <p>It is caused by a wide variety of factors, typically associated with other alerts thrown by the turbine.</p>
+            <br>
+            <p>To regain power, call engineering and tell them to reset the breakers.</p>
         </div>
         <div id="turbine-brk">
             <p>This light indicates that the turbine's main breaker is engaged.</p>
@@ -399,7 +472,7 @@
             <br>
             <p>It can be caused by numerous factors, such as high deaerator pressure, low turbine flow, and low turbine bypass.</p>
             <br>
-            <p>To resolve, you must increase turbine flow, turbine bypass, increase deaerator bypass, or enable steam relief valves.</p>
+            <p>To resolve, you must increase turbine flow, turbine bypass, increase deaerator relief, or enable steam relief valves.</p>
         </div>
         <div id="turbine-oulet">
             <p>This warning indicates that the outlet pressure of the turbine is too high.</p>
@@ -431,7 +504,7 @@
             <p>As of V.0.2.4, there is no danger to high deaerator temperatures. They can be ignored.</p>
             <br>
             <h3>If Temp Low:</h3>
-            <p>Increase steam inlet valve for deaerators to increase temperature. Adjust relief as neccessary.</p>
+            <p>Increase steam inlet valve for deaerators to increase temperature. Adjust relief as necessary.</p>
         </div>
         <div id="deaerator-pressure">
             <p>This alert indicates that the deaerator pressure is out of safe range.</p>
@@ -446,10 +519,10 @@
             <p>This alert indicates that the core water level is out of safe range.</p>
             <br>
             <h3>If Core Water High High:</h3>
-            <p>Disable feedwater pumps as necessary. Open recirc drain valves.</p>
+            <p>Disable feedwater pumps as necessary. Open circ drain valves.</p>
             <br>
             <h3>If Core Water High:</h3>
-            <p>Disable feedwater pumps (do exactly the same to condensate), enable recirc drain (if needed).</p>
+            <p>Disable feedwater pumps (do exactly the same to condensate), enable circ drain (if needed).</p>
             <br>
             <h3>If Core Water Low:</h3>
             <p>Enable more feedwater pumps or increase their speeds. Enable condensate pumps if needed.</p>
@@ -474,6 +547,8 @@
             <p>This alert indicates that the feedwater pump has tripped.</p>
             <br>
             <p>This is caused by a wide variety of factors, such as closed core isolation valves, or pump cavitation.</p>
+            <br>
+            <p>To regain power, call engineering and tell them to reset the breakers.</p>
         </div>
         <div id="feed-insufficient">
             <p>This warning indicates that the feedwater pumps are not providing enough water to the core.</p>
@@ -496,10 +571,10 @@
             <p>This warning indicates that the RPV (Reactor Pressure Vessel) temperature is out of safe range.</p>
             <br>
             <h3>If RPV Temp High:</h3>
-            <p>Increase recirc pump speeds, or enable more recirc pumps.</p>
+            <p>Increase main circ pump speeds, or enable more circ pumps.</p>
             <br>
             <h3>If RPV Temp Low:</h3>
-            <p>Decrease recirc pump speeds, disable recirc pumps, or increase reactor power.</p>
+            <p>Decrease main circ pump speeds, disable circ pumps, or increase reactor power.</p>
         </div>
         <div id="rpv-pressure">
             <p>This warning indicates that the RPV pressure is out of safe range.</p>
@@ -508,34 +583,36 @@
             <p><b>This is a dangerous situation.</b> Open all RPV relief valves. SCRAM reactor. Perform ECCS Inject if water level low.</p>
             <br>
             <h3>If RPV Pressure High:</h3>
-            <p>Verify that you have enough recirc pumps running for your power level. Ensure that reactor water levels in safe ranges.</p>
+            <p>Verify that you have enough main circ pumps running for your power level. Ensure that reactor water levels in safe ranges.</p>
         </div>
         <div id="rpv-relief-valve">
             <p>This warning indicates that the RPV relief valve is open.</p>
             <br>
             <p>This is normal behavior when the relief valve is open, but it should not be open unless there is an emergency.</p>
         </div>
-        <div id="recirc-dry">
-            <p>This warning indicates that the recirculation loop is dry.</p>
+        <div id="circ-dry">
+            <p>This warning indicates that the circulation loop is dry.</p>
             <br>
-            <p>This occurs when recirculation pumps are not running.</p>
+            <p>This occurs when main circulation pumps are not running.</p>
             <br>
-            <p>To resolve, enable recirculation pumps.</p>
+            <p>To resolve, enable main circulation pumps.</p>
         </div>
-        <div id="recirc-pump">
-            <p>This light indicates that the recirculation pump is running.</p>
+        <div id="circ-pump">
+            <p>This light indicates that the main circulation pump is running.</p>
             <br>
             <p>This is normal behavior during operation.</p>
         </div>
-        <div id="recirc-trip">
-            <p>This alert indicates that the recirculation pump has tripped.</p>
+        <div id="circ-trip">
+            <p>This alert indicates that the main circulation pump has tripped.</p>
             <br>
             <p>This is most of the time caused by lack of core water level. This will trigger an auto-SCRAM.</p>
-        </div>
-        <div id="recirc-drain">
-            <p>This alert indicates that the recirculation drain valve is open.</p>
             <br>
-            <p>This is normal behavior when the recirculation drain valve is open, but it should not be open unless core water levels are dangerously high.</p>
+            <p>To regain power, call engineering and tell them to reset the breakers.</p>
+        </div>
+        <div id="circ-drain">
+            <p>This alert indicates that the reactor circulation drain valve is open.</p>
+            <br>
+            <p>This is normal behavior when the reactor circulation drain valve is open, but it should not be open unless core water levels are dangerously high.</p>
         </div>
         <div id="reactor-fuel-leak">
             <p>This alert indicates that a fuel channel has leaked.</p>
@@ -556,7 +633,7 @@
         <div id="reactor-rods">
             <p>This warning indicates that you have selected more than 12 rods to move.</p>
             <br>
-            <p>You are only allowed to move up to 12 rods at once. To resolve, reduce how many rods you have selected.</p>
+            <p>You are only allowed to move up to 12 rods at once while <b>removing rods</b>. To resolve, reduce how many rods you have selected.</p>
         </div>
         <div id="reactor-autorods">
             <p>This light indicates that the automatic rods are set.</p>
@@ -573,7 +650,7 @@
             <br>
             <p>It is caused by running the reactor at extremely high thermal powers (4800MW or more).</p>
             <br>
-            <p>To resolve, reduce the reactor power by inserting rods or increasing recirculation pumps.</p>
+            <p>To resolve, reduce the reactor power by inserting rods or increasing main circulation pumps.</p>
         </div>
         <div id="reactor-zone">
             <p>This warning indicates that the shutdown rods are no longer inserted into the reactor.</p>
@@ -588,7 +665,7 @@
         <div id="reactor-shutdownrods">
             <p>This warning indicates that the shutdown rods are withdrawn.</p>
             <br>
-            <p>This is normal when the reactor is shutdown.</p>
+            <p>This is normal when during reactor operations.</p>
         </div>
         <div id="reactor-scrambypass">
             <p>This warning indicates that the automatic АЗ-5 bypass is enabled.</p>
@@ -608,7 +685,7 @@
             <p>Under this circumstance, the reactor will immediately insert all control rods as fast as possible, effectively stopping all power output.</p>
         </div>
         <div id="suppression-overpressure">
-            <p>This alert indicates that the suppression tank is overpressurized.</p>
+            <p>This alert indicates that the suppression tank is overpressureized.</p>
         </div>
         <div id="suppression-level">
             <p>This alert indicates that the suppression tank level is too high.</p>
@@ -628,6 +705,8 @@
             <p>This alert indicates that the offline core cooling circulation pumps have tripped.</p>
             <br>
             <p>This is most commonly caused by service pumps being disabled while OCC pumps are active.</p>
+            <br>
+            <p>To regain power, call engineering and tell them to reset the breakers.</p>
         </div>
         <div id="hotwell-lvl">
             <p>This alert will show if the hotwell is too low or too high.</p>
@@ -645,6 +724,8 @@
             <p>This alert indicates that the condensate pump has tripped.</p>
             <br>
             <p>This is typically caused by empty hotwells or a full deaerator.</p>
+            <br>
+            <p>To regain power, call engineering and tell them to reset the breakers.</p>
         </div>
         <div id="condensate-pump">
             <p>This light indicates that the condensate pump is running.</p>
@@ -666,12 +747,12 @@
             <p>This warning indicates that the battery is in use or is low.</p>
             <br>
             <h3>If Battery Critically Low:</h3>
-            <p>Verify the DC Rectifier switch is enabled. If off-grid power unavailable, start emergnecy diesel generators.</p>
+            <p>Verify the DC Rectifier switch is enabled. If off-grid power unavailable, start emergency diesel generators.</p>
         </div>
         <div id="elec-transformer">
             <p>This alert indicates that an electrical transformer is about to overload.</p>
             <br>
-            <p>To resolve, reduce the electrical load on the transformer by shutting down pumps or unneccessary systems.</p>
+            <p>To resolve, reduce the electrical load on the transformer by shutting down pumps or unnecessary systems.</p>
         </div>
         <div id="elec-rectifier">
             <p>This light indicates that the DC Rectifier is enabled.</p>
@@ -684,10 +765,15 @@
         <div id="elec-loop">
             <p>This alert indicates that the offsite power connection has been lost.</p>
             <br>
-            <p>To resolve, ensure the reactor is safely shutdown. Start emergency diesel generators.</p>
+			<h3>If loop</h3>
+            <p>refer to the <a href="emergency.html#loop">loop guide.</a></p>
+			<br>
+			<h3>else</h3>
+			<p>restore power to bus A.</p>
         </div>
         <div id="tower-low">
             <p>This alert indicates that the cooling tower basin is low.</p>
+            <p>You can refill the cooling tower basins by activating service pump.</p>
         </div>
         <div id="gen-fuel-low">
             <p>This alert indicates that the diesel generator fuel level is low.</p>
@@ -735,6 +821,7 @@
     <p>&copy; 2025 Koyot Digital</p> Our Discord Server, <a href="https://discord.gg/RT3Y6egQhR"><i class="fa-brands fa-discord"> Koyot Digital</i></a> <br> Play on <a href="https://www.roblox.com/games/15684145480/Oakridge-Nuclear-Power-Station-V0-2-4-BETA" target="_blank" rel="noopener"><i>Roblox</i></a>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/alarmsearch.js" defer></script>
 </body>
 </html>

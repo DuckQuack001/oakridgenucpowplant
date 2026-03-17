@@ -1,16 +1,14 @@
-# Notice: this repository has moved! please go to the new repo at https://GitHub.com/Koyot-Digital/
-
-
-
 ## ONPS Wiki
+
+>[!WARNING]
+>we are moving over to Svelte (a very nice framework) soon, if posible please wait before adding anything that is not needed, only minor changes will be approved, and no changes will be made from contributors as we move forward with the migration. A preview for the new wiki is avalable [here](https://wiki.scatterbox.dev)
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/DuckQuack001/oakridgenucpowplant?style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/DuckQuack001/oakridgenucpowplant?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/Koyot-Digital/Wiki?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/Koyot-Digital/Wiki?style=for-the-badge)
 
 
 Hey there! Thanks for wanting to improve the Oakridge Nuclear Power Station wiki. This guide will show you the important stuff and help you to contribute without accidentally breaking anything important.
@@ -92,7 +90,7 @@ Stuck on something? Everyone needs help sometimes, and there are a few ways to g
 ### 🏷️ Where to Ask
 
 **Technical Issues:**
-If you're having trouble with the code side of things, open an Issue in the repository or reach out to @ShrimpQuack on Discord. Be specific about what you're trying to do and what's going wrong.
+If you're having trouble with the code side of things, open an Issue in the repository or reach out to **@gargleblaster_rmbk**, **@felix2557** or anyone with a **Contributor** Role on the [Discord Server](https://discord.com/invite/exnVZvUJUw). Be specific about what you're trying to do and what's going wrong.
 
 **Content Questions:**
 Not sure if your changes fit the site's goals? Ask! Open an Issue and ask. It's better to check than to spend time on something that might not work out.
@@ -108,22 +106,3 @@ Remember that only `.webp` files work, and they should be compressed to keep the
 ## License
 
 This project is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
-
----
-
-*This section is for the hosting service and doesn't need to be edited by content contributors.*
-
----
-name: HTML Starter
-slug: html-starter-with-analytics
-description: HTML5 template with analytics and advanced routing configuration.
-deployUrl: https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/html&project-name=html
-relatedTemplates:
-  - nextjs-boilerplate
----
-
-# HTML Starter
-
-This is a starter HTML5 templates which is configured with Vercel Analytics (through a `script` tag), advanced routing with [Vercel Edge Middleware](https://vercel.com/docs/concepts/functions/edge-middleware), as well as some basic styles
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/html&project-name=html)
